@@ -6,9 +6,9 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "seed": "node scripts/seed.js",
-    "db:reset": "node scripts/reset.js",
-    "db:setup": "node scripts/seed.js"
+    "seed": "ts-node-dev --transpile-only scripts/seed.ts",
+    "db:reset": "ts-node-dev --transpile-only scripts/reset.ts",
+    "db:setup": "ts-node-dev --transpile-only scripts/seed.ts"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",

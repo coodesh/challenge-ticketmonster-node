@@ -12,36 +12,36 @@ async function seedDatabase() {
 
         console.log('👥 Creating users...');
         const users = await User.bulkCreate([
-            {
-                name: 'Admin User',
-                email: 'admin@ticketmonster.com',
-                password: await bcrypt.hash('admin123', 10),
-                role: 2, // Admin
-            },
-            {
-                name: 'John Smith',
-                email: 'john@example.com',
-                password: await bcrypt.hash('user123', 10),
-                role: 1, // User
-            },
-            {
-                name: 'Jane Doe',
-                email: 'jane@example.com',
-                password: await bcrypt.hash('user123', 10),
-                role: 1, // User
-            },
-            {
-                name: 'Mike Johnson',
-                email: 'mike@example.com',
-                password: await bcrypt.hash('user123', 10),
-                role: 1, // User
-            },
-            {
-                name: 'Sarah Wilson',
-                email: 'sarah@example.com',
-                password: await bcrypt.hash('user123', 10),
-                role: 1, // User
-            }
+          {
+            name: "Admin User",
+            email: "admin@ticketmonster.com",
+            password: await bcrypt.hash("admin123", 10),
+            role: 0, // Admin
+          },
+          {
+            name: "John Smith",
+            email: "john@example.com",
+            password: await bcrypt.hash("user123", 10),
+            role: 1, // User
+          },
+          {
+            name: "Jane Doe",
+            email: "jane@example.com",
+            password: await bcrypt.hash("user123", 10),
+            role: 1, // User
+          },
+          {
+            name: "Mike Johnson",
+            email: "mike@example.com",
+            password: await bcrypt.hash("user123", 10),
+            role: 1, // User
+          },
+          {
+            name: "Sarah Wilson",
+            email: "sarah@example.com",
+            password: await bcrypt.hash("user123", 10),
+            role: 1, // User
+          },
         ]);
 
         console.log('🎬 Creating movies...');
